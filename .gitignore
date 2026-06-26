@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+
+# Environment variables
+.env
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+# Migrations (keep __init__.py)
+*/migrations/*
+!*/migrations/__init__.py
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Pytest
+.pytest_cache/
+
+# Docker
+*.log
+
+# Coverage
+.coverage
+htmlcov/
+
+# Misc
+*.swp
