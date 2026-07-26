@@ -1,0 +1,35 @@
+replicaCount: 2
+
+image:
+  repository: 912096796684.dkr.ecr.us-west-2.amazonaws.com/lesson-7-ecr
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 8000
+  targetPort: 8000
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  
+config:
+  DEBUG: "True"
+
+  DJANGO_SETTINGS_MODULE: "config.settings"
+
+  POSTGRES_DB: "movies_db"
+  POSTGRES_USER: "postgres"
+  POSTGRES_PASSWORD: "<POSTGRES_PASSWORD>"
+
+  DB_HOST: "<DB_HOST>"
+  DB_PORT: "5432"
+
+  ALLOWED_HOSTS: "<ALLOWED_HOSTS>"
+
+  SECRET_KEY: "<SECRET_KEY>"

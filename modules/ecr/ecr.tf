@@ -23,7 +23,7 @@ resource "aws_ecr_repository_policy" "this" {
         Effect = "Allow"
 
         Principal = {
-          AWS = "*"
+          AWS = "arn:aws:iam::912096796684:root"
         }
 
         Action = [

@@ -48,6 +48,17 @@ module "vpc" {
 module "ecr" {
   source = "./modules/ecr"
 
-  ecr_name     = "lesson-5-ecr"
+  ecr_name     = "lesson-7-ecr"
   scan_on_push = true
+}
+
+module "eks" {
+
+  source = "./modules/eks"
+
+  cluster_name = "lesson7-cluster"
+
+  vpc_id = module.vpc.vpc_id
+
+  subnet_ids = module.vpc.private_subnet_ids
 }

@@ -4,6 +4,9 @@
 *.tfstate.*
 crash.log
 
+# dgango-app
+values.local.yaml
+
 # Terraform variables
 *.tfvars
 *.tfvars.json
@@ -16,3 +19,4 @@ override.tf.json
 
 # macOS
 .DS_Store
+
